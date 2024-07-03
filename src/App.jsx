@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Info from "./Info";
 import { useDispatch } from "react-redux";
-import { ADD } from "./Fish"; // Ensure correct path
-import "./App.css"; // Import the CSS file
-
+import { ADD } from "./Fish"; 
+import "./App.css"; 
 function App() {
   const dispatch = useDispatch();
   const [data, setData] = useState("");
@@ -13,9 +12,9 @@ function App() {
   };
 
   const addData = () => {
-    if (data.trim() !== "") { // Check if the input is not empty
+    if (data.trim() !== "") { 
       dispatch(ADD(data));
-      setData(""); // Clear the input field
+      setData(""); 
     }
   };
 
